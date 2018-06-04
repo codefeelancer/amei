@@ -1,0 +1,156 @@
+#container #content {
+	display: block;
+	float: left;
+	width: 450px;
+	margin-left: 30px;
+}
+
+#container #content_column {
+	display: block;
+	float: right;
+	width: 700px;
+	margin-left: 30px;
+}
+
+#left_column .subnav {
+	display: block;
+	width: 200px;
+	min-height: 200px;
+	padding: 25px;
+	background-color: #F7F7F7;
+	margin-bottom: 30px;
+	line-height: normal;
+}
+
+#left_column .subnav h2 {
+	margin: 0 0 20px 0;
+	padding: 0 0 14px 0;
+	background-color: #F7F7F7;
+	border-bottom: 1px dotted #666666;
+}
+
+#left_column .subnav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#left_column .subnav li {
+	margin: 0 0 3px 0;
+	padding: 0;
+}
+
+#left_column .subnav li a {
+	display: block;
+	margin: 0;
+	padding: 5px 10px 5px 20px;
+	color: #666666;
+	background: url("../images/brown_file.gif") no-repeat 10px center
+		#F7F7F7;
+	text-decoration: none;
+	border-bottom: 1px dotted #666666;
+}
+/* ----------------------------------------------Generalise-------------------------------------*/
+#container #left_column .holder, #container #right_column .holder {
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+#container #left_column .imgholder, #container #right_column .imgholder
+	{
+	display: block;
+	margin-bottom: 5px;
+}
+
+#container #left_column .nostart li, #container #right_column .nostart li
+	{
+	margin-bottom: 3px;
+}
+
+#container #left_column .last, #container #right_column .last {
+	margin-bottom: 0;
+}
+
+/* ----------------------------------------------Left Column-------------------------------------*/
+#container #left_column {
+	display: block;
+	float: left;
+	width: 200px;
+}
+
+#container #left_column .imgholder {
+	width: 190px;
+}
+
+/* ----------------------------------------------Right Column-------------------------------------*/
+#container #right_column {
+	display: block;
+	float: right;
+	width: 250px;
+}
+
+#container #right_column .imgholder {
+	width: 240px;
+}
+/* ----------------------------------------------new add-------------------------------------*/
+.abstractNews {
+	display: inline-block;
+	width: 360px;
+	height: 20px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	vertical-align: middle;
+}
+
+.article-content {
+	padding: 25px 20px;
+	border: 1px solid #d8d8d8;
+	/* border-radius: 10px; */
+}
+
+.article-list {
+	margin-left: -20px;
+}
+.abstractNews2 {
+	display: inline-block;
+	width: 570px;
+	height: 20px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	vertical-align: middle;
+}
+.article-list a {
+	display:block;
+	padding: 5px 5px 5px 0;
+	color: #000000;
+	
+}
+.article-list li {
+	
+	vertical-align: middle;
+}
+.article-list a:hover {
+	color: #510000;
+	background-color: #F7F7F7;
+}
+
+.tag {
+	color: #ff0000;
+	font-weight: bold;
+}
+
+.pagination a {
+    color: #896C50;
+    background-color: #FFFFFF;
+}
+ .subnav a:hover  .more{
+	color: #510000;
+	font-weight: bold;
+}
+ .holder a:hover .more{
+	color: #510000;
+	font-weight: bold;
+}

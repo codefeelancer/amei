@@ -1,0 +1,42 @@
+@CHARSET "UTF-8";
+
+#attachment-list{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+#attachment-list li{
+	display: inline-block;
+	padding:5px 10px 5px 0;
+}
+#btn-upload,#input-attachment{
+	display: inline-block;
+}
+.attachment{
+	    display: inline-block;
+    padding: 15px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-top-left-radius: 30px;
+    background: #eee;
+    box-shadow: 0 0 5px #ddd;
+}
+.delete-attachment{
+	display: inline-block;
+}
+.delete-attachment img{
+	width:16px;
+	height:16px;
+}
+.delete-attachment:hover {
+	transform: scale(1.3, 1.3);
+	-ms-transform: scale(1.3, 1.3); /* IE 9 */
+	-moz-transform: scale(1.3, 1.3); /* Firefox */
+	-webkit-transform: scale(1.3, 1.3); /* Safari 和 Chrome */
+	-o-transform: scale(1.3, 1.3); /* Opera */
+}
+
+#loading{
+	display:none;
+}

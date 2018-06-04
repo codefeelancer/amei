@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+		 http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+         http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context-3.0.xsd
+         http://www.springframework.org/schema/aop  
+         http://www.springframework.org/schema/aop/spring-aop-3.0.xsd 
+         http://www.springframework.org/schema/mvc 
+         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+	<!-- ======================================= Spring Framework=================================== -->
+
+	<!-- 开启aop事务管理注解 -->
+	<aop:aspectj-autoproxy />
+
+	<!-- 自动扫面注解包 -->
+	<context:annotation-config />
+
+	<!-- annotation package scan -->
+	<context:component-scan base-package="abr.*" />
+
+	<!-- ===========================================Database & Hibernate========================================= -->
+	<!-- jdbc.properties -->
+	<bean id="propertyConfig"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" value="WEB-INF/all.properties" />
+		<property name="fileEncoding" value="utf-8" />
+	</bean> <!---->
+
+	<!-- config datasource -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close" scope="singleton">
+		<property name="driverClass" value='${jdbc.driver}' />
+		<property name="jdbcUrl" value="${jdbc.url}" />
+		<!-- <property name="user" value="${jdbc.username}" /> <property name="password" 
+			value="$jdbc.password}" /> -->
+		<property name="maxPoolSize" value="1" />
+		<property name="minPoolSize" value="1" />
+		<property name="initialPoolSize" value="1" />
+		<property name="maxIdleTime" value="20" />
+	</bean>
+	
+	
+	<!-- 邮件服务 -->
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.163.com" />
+		<property name="port" value="25" />
+		<property name="username" value="schenkertech@163.com" />
+		<property name="password" value="schenker2017" /> <!-- 授权码：schenker2017 --><!-- 密码：zurichbeijing -->
+		<property name="defaultEncoding" value="UTF-8"></property>
+		<property name="javaMailProperties">
+			<props>
+				<!-- 验证身份 -->
+				<prop key="mail.smtp.auth">true</prop>   <!-- 先前因为写成mail.smtps.auth 的原因，一直报错-->
+				<prop key="mail.smtp.timeout">25000</prop>
+				<prop key="mail.smtp.host">smtp.163.com</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="simpleMailMessage" class="org.springframework.mail.SimpleMailMessage"
+		scope="singleton">
+		<property name="from">
+			<value>schenkertech@163.com</value>
+		</property>
+	</bean>
+	<bean id="velocityEngine"
+		class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+		<property name="velocityProperties">
+			<props>
+				<prop key="resource.loader">class</prop>
+				<prop key="class.resource.loader.class">
+					org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+				</prop>
+				<prop key="velocimacro.library"></prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="mailsenderService" class="abr.service.MailSenderService">
+		<property name="mailSender" ref="mailSender" />
+		<property name="simpleMailMessage" ref="simpleMailMessage" />
+		<property name="velocityEngine" ref="velocityEngine" />
+	</bean>
+
+</beans>

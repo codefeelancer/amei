@@ -1,0 +1,12 @@
+Someone who has seen the website want to contact you. Some information as follow:
+
+Email address: ${email}
+Name: ${name}
+First Name: ${firstname}
+Tel: ${titel}
+Company: ${company}
+Address: ${address}
+City: ${city}
+ZIP Code: ${zipcode}
+Content: ${content}
+
