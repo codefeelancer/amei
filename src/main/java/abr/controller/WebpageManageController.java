@@ -33,6 +33,7 @@ public class WebpageManageController {
 		
 		//去除各种换行符，否则文章页面可能缺少一部分
 		content = content.replaceAll("\r\n||\\r\\n|\r|\n|\\n|\\r", "");
+		content = content.replaceAll("\'", "&apos;");
 		
 		boolean isSuccess = webpageDao.addWebpage(title, path, content);
 		//根据insert结果，重定向到新页面
@@ -51,7 +52,8 @@ public class WebpageManageController {
 		log.info("modify article");
 		//去除各种换行符，否则文章页面可能缺少一部分
 		content = content.replaceAll("\r\n||\\r\\n|\r|\n|\\n|\\r", "");
-				
+		content = content.replaceAll("\'", "&apos;");
+
 		if (webpageDao.modifyWebpage(title, content, path)) {
 			return "redirect:view?path=" + path;
 		} else {
