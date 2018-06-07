@@ -53,25 +53,26 @@
         <div class="collapse navbar-collapse"
              id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a data="" href="">Home</a></li>
-                <li><a data="technology" href="technology">Technology</a></li>
+                <li><a data-suffix="" href="">Home</a></li>
+                <li><a data-suffix="technology" href="technology">Technology</a></li>
                 <li>
-                    <a data="products" href="javascript:void(0)">Products</a>
+                    <a data-suffix="products" href="javascript:void(0)">Products</a>
                     <ul>
-                        <li><a data="products-cri" href="products-cri">Imedos Retina Camera</a></li>
-                        <li><a data="products-supersesi" href="products-supersesi">SUPER SESI</a></li>
+                        <li><a data-suffix="products-cri" href="products-cri">Imedos Retina Camera</a></li>
+                        <li><a data-suffix="products-supersesi" href="products-supersesi">SUPER SESI</a></li>
                     </ul>
                 </li>
-                <li><a data="download" href="download">Download</a></li>
-                <li><a data="news" href="news">News</a></li>
-                <li><a data="links" href="links">Links</a></li>
-                <li><a data="about" href="about">About</a></li>
-                <li><a data="contact" href="contact">Contact</a></li>
+                <li><a data-suffix="download" href="download">Download</a></li>
+                <li><a data-suffix="news" href="news">News</a></li>
+                <li><a data-suffix="links" href="links">Links</a></li>
+                <li><a data-suffix="about" href="about">About</a></li>
+                <li><a data-suffix="contact" href="contact">Contact</a></li>
             </ul>
         </div>
         <!--/.navbar-collapse-->
     </nav>
      <div class="clearfix"></div>
+
 </div>
 <!-- /.header-bottom -->
 <!-- /header -->

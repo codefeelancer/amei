@@ -55,20 +55,20 @@
         <div class="collapse navbar-collapse"
              id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a data="" href="cn/">首页</a></li>
-                <li><a data="technology" href="cn/technology">技术</a></li>
+                <li><a data-suffix="" href="cn/">首页</a></li>
+                <li><a data-suffix="technology" href="cn/technology">技术</a></li>
                 <li>
-                		<a data="products" href="javascript:void(0)">产品</a>
+                		<a data-suffix="products" href="javascript:void(0)">产品</a>
                     <ul>
-                        <li><a data="products-cri" href="cn/products-cri">眼底照相机</a></li>
-                        <li><a data="products-supersesi" href="cn/products-supersesi">SUPER SESI</a></li>
+                        <li><a data-suffix="products-cri" href="cn/products-cri">眼底照相机</a></li>
+                        <li><a data-suffix="products-supersesi" href="cn/products-supersesi">SUPER SESI</a></li>
                     </ul>
-                	</li>
-                <li><a data="download" href="cn/download">下载</a></li>
-                <li><a data="news" href="cn/news">新闻</a></li>
-                <li><a data="links" href="cn/links">链接</a></li>
-                <li><a data="about" href="cn/about">关于</a></li>
-                <li><a data="contact" href="cn/contact">联系我们</a></li>
+                </li>
+                <li><a data-suffix="download" href="cn/download">下载</a></li>
+                <li><a data-suffix="news" href="cn/news">新闻</a></li>
+                <li><a data-suffix="links" href="cn/links">链接</a></li>
+                <li><a data-suffix="about" href="cn/about">关于</a></li>
+                <li><a data-suffix="contact" href="cn/contact">联系我们</a></li>
             </ul>
         </div>
         <!--/.navbar-collapse-->
