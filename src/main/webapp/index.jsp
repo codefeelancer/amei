@@ -26,8 +26,8 @@
         </div>
     </div>
     <div class="col-md-4">
-        <h4>Schenker Trading Co.,ltd</h4>
-        <p>Schenker Trading (Beijing) is committed to offer advanced diagnostic tools for the early detection of various
+        <h4>Schenker Beijing</h4>
+        <p>Schenker Beijing is committed to offer advanced diagnostic tools for the early detection of various
             diseases. Our new technologies will allow scientists and doctors to detect specific diseases at an early
             stage – when treatment is easier and offers a much better prognosis.</p>
     </div>
